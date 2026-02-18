@@ -4,12 +4,11 @@ SysInfo Lite is a lightweight, GUI-based Linux application that displays essenti
 
 ## Features
 
-- **CPU Usage**: Real-time CPU usage percentage.
-- **RAM Usage**: Used vs. Total memory.
-- **Disk Usage**: Root partition usage.
+- **CPU/RAM/Disk**: Visual progress bars for usage stats.
+- **Network Info**: Hostname and Local IP address.
 - **OS Info**: Operating System and Kernel version.
 - **Uptime**: System uptime.
-- **Refresh**: Instantly update all metrics.
+- **Auto-Refresh**: Toggle automatic data updates (every 2s).
 - **Export**: Save the current system snapshot to a text file.
 
 ## Requirements
