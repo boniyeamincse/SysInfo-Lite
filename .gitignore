@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Debian packaging
+debian/usr/
+!debian/usr/share/applications/sysinfo-lite.desktop
+sysinfo-lite_*.deb
+*.deb
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp

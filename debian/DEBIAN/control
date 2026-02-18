@@ -1,0 +1,11 @@
+Package: sysinfo-lite
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, python3-tk, procps
+Maintainer: Boni <boni@example.com>
+Description: Lightweight System Information Tool
+ A simple GUI application to display system information including
+ CPU usage, RAM usage, Disk usage, OS version, and Uptime.
+ Built with Python and Tkinter.
