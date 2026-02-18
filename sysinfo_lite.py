@@ -12,6 +12,19 @@ class SysInfoApp:
         self.root.geometry("400x350")
         self.root.resizable(False, False)
 
+        # Process Icon
+        try:
+            icon_path = "resources/sysinfo_lite.png"
+            # Check if running installed (usually /usr/share/icons/sysinfo-lite.png)
+            if not os.path.exists(icon_path):
+                 icon_path = "/usr/share/icons/sysinfo-lite.png"
+            
+            if os.path.exists(icon_path):
+                icon = tk.PhotoImage(file=icon_path)
+                self.root.iconphoto(True, icon)
+        except Exception as e:
+            print(f"Failed to load icon: {e}")
+
         # Style Configuration
         style = ttk.Style()
         style.configure("TLabel", font=("Helvetica", 10))
