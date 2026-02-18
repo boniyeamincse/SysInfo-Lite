@@ -140,6 +140,7 @@ class SysInfoApp:
         # Frame styles
         style.configure("Card.TFrame", background="white", relief="raised", borderwidth=1)
         style.configure("TFrame", background=bg_color)
+        style.configure("Row.TFrame", background="white") # New style for rows
         style.configure("TLabel", background="white", font=("Helvetica", 10))
         style.configure("Header.TLabel", background=bg_color, font=("Helvetica", 16, "bold"), foreground="#333")
         style.configure("SubHeader.TLabel", background="white", font=("Helvetica", 11, "bold"), foreground="#555")
@@ -196,7 +197,7 @@ class SysInfoApp:
         lbl_status.pack(side=tk.BOTTOM, anchor="e", pady=(5,0))
 
     def create_info_row(self, parent, label):
-        frame = ttk.Frame(parent, style="TFrame", background="white")
+        frame = ttk.Frame(parent, style="Row.TFrame")
         frame.pack(fill=tk.X, pady=2)
         ttk.Label(frame, text=label, width=12, style="SubHeader.TLabel").pack(side=tk.LEFT)
         val_lbl = ttk.Label(frame, text="--", style="TLabel")
@@ -204,10 +205,10 @@ class SysInfoApp:
         return val_lbl
 
     def create_progress_row(self, parent, label):
-        frame = ttk.Frame(parent, style="TFrame", background="white")
+        frame = ttk.Frame(parent, style="Row.TFrame")
         frame.pack(fill=tk.X, pady=4)
         
-        top_frame = ttk.Frame(frame, background="white")
+        top_frame = ttk.Frame(frame, style="Row.TFrame")
         top_frame.pack(fill=tk.X)
         ttk.Label(top_frame, text=label, width=12, style="SubHeader.TLabel").pack(side=tk.LEFT)
         val_lbl = ttk.Label(top_frame, text="--%", style="TLabel")
